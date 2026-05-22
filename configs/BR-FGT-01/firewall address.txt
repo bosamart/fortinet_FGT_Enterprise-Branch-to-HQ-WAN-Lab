@@ -1,0 +1,80 @@
+config firewall address
+    edit "none"
+        set uuid 8e75e4ca-4e06-51f1-95e4-946efdd40b50
+        set subnet 0.0.0.0 255.255.255.255
+    next
+    edit "login.microsoftonline.com"
+        set uuid 8e75e7d6-4e06-51f1-f2ce-f8949604caf5
+        set type fqdn
+        set fqdn "login.microsoftonline.com"
+    next
+    edit "login.microsoft.com"
+        set uuid 8e75ea06-4e06-51f1-9731-d91015219100
+        set type fqdn
+        set fqdn "login.microsoft.com"
+    next
+    edit "login.windows.net"
+        set uuid 8e75ebaa-4e06-51f1-2cb5-e7bb00e51701
+        set type fqdn
+        set fqdn "login.windows.net"
+    next
+    edit "gmail.com"
+        set uuid 8e75ed3a-4e06-51f1-2fcf-64b590955196
+        set type fqdn
+        set fqdn "gmail.com"
+    next
+    edit "wildcard.google.com"
+        set uuid 8e75eed4-4e06-51f1-e259-b88bc012bac0
+        set type fqdn
+        set fqdn "*.google.com"
+    next
+    edit "wildcard.dropbox.com"
+        set uuid 8e75f06e-4e06-51f1-78bb-f4f4ac477fc4
+        set type fqdn
+        set fqdn "*.dropbox.com"
+    next
+    edit "all"
+        set uuid 8ee9a39c-4e06-51f1-fef8-84862f36b188
+    next
+    edit "FIREWALL_AUTH_PORTAL_ADDRESS"
+        set uuid 8ee9a46e-4e06-51f1-c7b5-b34cea2d6a82
+    next
+    edit "FABRIC_DEVICE"
+        set uuid 8ee9a522-4e06-51f1-df9d-c51310911164
+        set comment "IPv4 addresses of Fabric Devices."
+    next
+    edit "SSLVPN_TUNNEL_ADDR1"
+        set uuid 8ee9e820-4e06-51f1-7328-a517bedfa409
+        set type iprange
+        set start-ip 10.212.134.200
+        set end-ip 10.212.134.210
+    next
+    edit "BR-to-HQ_local_subnet_1"
+        set uuid 55513bb4-4e19-51f1-b93d-aa61bc4d39e3
+        set allow-routing enable
+        set subnet 10.20.10.0 255.255.255.0
+    next
+    edit "BR-to-HQ_remote_subnet_1"
+        set uuid 55529036-4e19-51f1-861d-78813169a0de
+        set allow-routing enable
+        set subnet 10.10.10.0 255.255.255.0
+    next
+    edit "BR-to-HQ_local_subnet_2"
+        set uuid 56f418fc-4e22-51f1-ffb6-946a55732d6b
+        set allow-routing enable
+        set subnet 10.20.20.0 255.255.255.0
+    next
+    edit "BR-to-HQ_remote_subnet_2"
+        set uuid 67d73c8a-4e22-51f1-eabb-4e2bc229e29c
+        set allow-routing enable
+        set subnet 10.10.20.0 255.255.255.0
+    next
+    edit "BR-VLAN20"
+        set uuid ddd8bd5e-4e23-51f1-10be-d7eec5c93322
+        set subnet 10.20.20.0 255.255.255.0
+    next
+    edit "HQ-VLAN20"
+        set uuid ddd94bac-4e23-51f1-eba1-41ac7c9b5dd1
+        set subnet 10.10.20.0 255.255.255.0
+    next
+end

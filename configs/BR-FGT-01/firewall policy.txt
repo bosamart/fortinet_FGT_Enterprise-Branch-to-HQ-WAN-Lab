@@ -1,0 +1,112 @@
+config firewall policy
+    edit 1
+        set name "VLAN10-to-VPN"
+        set uuid 4bd8077e-4e47-51f1-913f-8300d30907e9
+        set srcintf "VLAN10"
+        set dstintf "BR-to-HQ"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 2
+        set name "VPN-to-VLAN10"
+        set uuid 4bd8cc0e-4e47-51f1-17d6-0f98aafa7fd7
+        set srcintf "BR-to-HQ"
+        set dstintf "VLAN10"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 3
+        set name "VLAN20-to-VPN"
+        set uuid ceb67c2a-4e47-51f1-ba58-d35b8d1342b2
+        set srcintf "VLAN20"
+        set dstintf "BR-to-HQ"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 4
+        set name "VPN-to-VLAN20"
+        set uuid ceb74b6e-4e47-51f1-f52f-bd4674d10bc2
+        set srcintf "BR-to-HQ"
+        set dstintf "VLAN20"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 100
+        set name "VLAN999-to-VPN"
+        set uuid 31e73d94-4e56-51f1-cf3c-3e654c8dc969
+        set srcintf "VLAN999"
+        set dstintf "BR-to-HQ"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 300
+        set name "VLAN30-to-ISP2"
+        set uuid 4b58a002-4e5f-51f1-130d-9b28ac255fb3
+        set srcintf "VLAN30"
+        set dstintf "BR-to-HQ-ISP2"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 301
+        set name "ISP2-to-VLAN30"
+        set uuid 4b59a27c-4e5f-51f1-4f24-c37caa2069c2
+        set srcintf "BR-to-HQ-ISP2"
+        set dstintf "VLAN30"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 101
+        set name "VPN-to-VLAN999"
+        set uuid 7cf3cdec-4efc-51f1-a729-6dafded4175b
+        set srcintf "BR-to-HQ"
+        set dstintf "VLAN999"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 102
+        set name "VLAN999-to-VPN2"
+        set uuid a634938a-4efc-51f1-064c-7f2474cf8fff
+        set srcintf "VLAN999"
+        set dstintf "BR-to-HQ-ISP2"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+    edit 103
+        set name "VPN2-to-VLAN999"
+        set uuid a635bf94-4efc-51f1-3fc8-2e27a481e274
+        set srcintf "BR-to-HQ-ISP2"
+        set dstintf "VLAN999"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+    next
+end
